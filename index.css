@@ -17,18 +17,31 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #21222A;
+    width: 550;
+    height: 91;
 }
-
-.nav-list {
-    list-style: none;
+nav{
     display: flex;
+    align-items: center;
+    height: 100%;
+}
+body{
+    margin: 0;
+    font-family: Inter,sans-serif;
 }
 
-.nav-list-item {
-    margin-left: 10px;
-    font-size: 1.1rem;
+header{
+    height: 90px;
+    background-color: #21222A;
+    padding: 30px 25px;
 }
-
-.nav-logo {
-    width: 55px;
+nav > img{
+    width: 40px;
+    margin-right: 7px;
+}
+nav > span{
+    color: #61DAFB; 
+    font-size:1.4rem;
+    font-weight: 700;
 }
