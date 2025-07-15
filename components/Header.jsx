@@ -1,7 +1,8 @@
 export default function Header(){
-    <header>
+    return(<header>
         <nav>
-            <img src="images/globe.png"></img>
+            <img src="images/globe.png" />
+            <span>my travel journal.</span>
         </nav>
-    </header>
+    </header>)
 }

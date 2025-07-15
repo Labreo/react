@@ -1,3 +1,23 @@
 html, body {
     margin: 0;
 }
+header{
+    background-color:lightcoral;
+   padding: 10;
+}
+
+nav{
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+}
+
+nav > img{
+    width: 24px;
+    height: 24px;
+}
+
+nav > span{
+    color: white;
+    margin-top: 2px;
+}
