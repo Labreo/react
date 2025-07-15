@@ -5,6 +5,5 @@ export default function Navbar(){
             <span className="nav-text">ReactFacts</span>
         </nav>
     </header>
-        
-    )
+     )
 }

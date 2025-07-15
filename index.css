@@ -3,7 +3,7 @@
 }
 
 body {
-    padding: 20px;
+    margin:0;
     font-family: Arial, Helvetica, sans-serif;
     background: #27292c;
     color: white;
@@ -18,7 +18,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     background-color: #21222A;
-    width: 550;
+    width: 560;
     height: 91;
 }
 nav{
@@ -26,10 +26,7 @@ nav{
     align-items: center;
     height: 100%;
 }
-body{
-    margin: 0;
-    font-family: Inter,sans-serif;
-}
+
 
 header{
     height: 90px;
@@ -44,4 +41,23 @@ nav > span{
     color: #61DAFB; 
     font-size:1.4rem;
     font-weight: 700;
+}
+
+main > h1{ margin-top: 50px;
+    margin: 10;
+
+}
+
+.list{
+    width: 390px;
+    height: 190px;
+    margin-top: 46px;
+    margin-left: 54px;
+    font-family: Inter;
+    font-weight: 400px;
+    font-size: 16px;
+}
+.list>li{
+    padding-block: 10px;
+    line-height: 19px;
 }

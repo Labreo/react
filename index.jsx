@@ -5,14 +5,8 @@ const root = createRoot(document.getElementById("root"))
 
 
 
-function Page() {
-    return (
-        <>
-        <App />
-        </>
-    )
-}
+
 
 root.render(
-    <Page />
+    <App />
 )
