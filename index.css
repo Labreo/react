@@ -23,3 +23,26 @@ nav > span{
     font-family: Inter;
     font-weight: 500;
 }
+
+.Body{
+ margin-top: 120px;
+    margin-left: 184px;
+}
+
+.Marker{
+ margin-top: 4px;
+}
+
+.FirstLine{
+   
+    display: flex;
+    gap:10px;
+}
+
+.PlaceName{
+    width: 40px;
+    margin-top: 2px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 10.24px;
+}
