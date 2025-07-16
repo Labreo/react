@@ -20,4 +20,6 @@ nav > img{
 nav > span{
     color: white;
     margin-top: 2px;
+    font-family: Inter;
+    font-weight: 500;
 }
