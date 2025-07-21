@@ -4,11 +4,12 @@ import Contact from "./components/Contact";
 import Joke from "./components/Joke";
 export default function App(){
  return(<>
- <Joke setup="I'm reading a book on anti-gravity." punchline="It's impossible to put down." />
- <Joke setup="What do you call a fake noodle?" punchline="An impasta." />
- <Joke setup="I told my wife she was drawing her eyebrows too high." punchline="She looked surprised." />
- <Joke setup="Why don't scientists trust atoms?" punchline="Because they make up everything." />
- <Joke setup="My dog used to chase people on a bike a lot." punchline="It got so bad I had to take his bike away." />
+<Header />
+<main className="container">
+ <Entry img={{src:"https://scrimba.com/links/travel-journal-japan-image-url",
+    alt: "Mount Fuji"}} title="Mount Fuji" country="Japan" googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu
+" dates="12 Jan, 2021 - 24 Jan, 2021" text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."/>
+ </main>
  </>
  );
 }
