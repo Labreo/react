@@ -24,12 +24,10 @@ nav > span{
     font-weight: 500;
 }
 
-.Body{
-    margin-top: 120px;
-    margin-left: 184px;
+.Body {
     position: relative;
+    max-width: 600px;
 }
-
 .Marker{
  margin-top: 4px;
 }
@@ -48,13 +46,18 @@ nav > span{
     font-size: 10.24px;
 }
 
-.main-image{
+
+.main-image {
     width: 125px;
-    height: 168px;
-   overflow: hidden;
-   object-fit: cover;
-   border-radius: 5px;
-   position: absolute;
-   top: 176px;
-   left:25;
- }
+    height: 192px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+ .entry-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 25px 184px 20px 184px;
+}
