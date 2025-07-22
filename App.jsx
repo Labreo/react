@@ -1,23 +1,11 @@
-import Header from "./components/Header"; 
-import Entry from "./components/Entry";
-import Contact from "./components/Contact";
-import Joke from "./components/Joke";
-import data from "./data"
+import Header from "./components/Header"
+import Main from "./components/Main"
 
-const dataElements = data.map((entry)=>{return <Entry entry={entry} key={entry.id} /> }) 
-export default function App(){
- return(<>
-<Header />
-<main className="container">
-  {dataElements}
- </main>
- </>
- );
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  )
 }
-
-
-
-
-
-
-

@@ -1,63 +1,64 @@
-html, body {
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
-}
-header{
-    background-color:lightcoral;
-   padding: 10;
+    font-family: Inter, sans-serif;
+    background-color: #FAFAF8;
 }
 
-nav{
-     display: flex;
-     justify-content: center;
-     gap: 10px;
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
 
-nav > img{
-    width: 24px;
-    height: 24px;
+header > img {
+    width: 50px;
 }
 
-nav > span{
-    color: white;
-    margin-top: 2px;
-    font-family: Inter;
+header > h1 {
+    font-weight: 400;
+}
+
+main {
+    padding: 30px 30px 10px;
+}
+
+.add-ingredient-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    height: 38px;
+}
+
+.add-ingredient-form > input {
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    padding: 9px 13px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 400px;
+}
+
+.add-ingredient-form > button {
+    font-family: Inter, sans-serif;
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    width: 150px;
+    font-size: 0.875rem;
     font-weight: 500;
 }
 
-.Body {
-    position: relative;
-    max-width: 600px;
-}
-.Marker{
- margin-top: 4px;
-}
-
-.FirstLine{
-   
-    display: flex;
-    gap:10px;
-}
-
-.PlaceName{
-    width: 40px;
-    margin-top: 2px;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 10.24px;
-}
-
-
-.main-image {
-    width: 125px;
-    height: 192px;
-    object-fit: cover;
-    border-radius: 5px;
-    flex-shrink: 0;
-}
-
- .entry-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
-    padding: 25px 184px 20px 184px;
+.add-ingredient-form > button::before {
+    content: "+";
+    margin-right: 5px;
 }

@@ -1,8 +1,10 @@
-export default function Header(){
-    return(<header>
-        <nav>
-            <img src="images/globe.png" />
-            <span>my travel journal.</span>
-        </nav>
-    </header>)
+import chefClaudeLogo from "/images/chef-claude-icon.png"
+
+export default function Header() {
+    return (
+        <header>
+            <img src={chefClaudeLogo}/>
+            <h1>Chef Claude</h1>
+        </header>
+    )
 }

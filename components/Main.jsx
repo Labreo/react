@@ -1,14 +1,14 @@
-export default function Main(){
-    return(<main>
-        <h1>Fun facts about React</h1>
-        
-        <ul className="list">
-<li>Was first released in 2013</li>
-<li>Was originally created by Jordan Walke</li>
-<li>Has well over 200K stars on GitHub</li>
-<li>Is maintained by Meta</li>
-<li>Powers thousands of enterprise apps, including mobile apps</li>
-        </ul>
+export default function Main() {
+    return (
+        <main>
+            <form className="add-ingredient-form">
+                <input 
+                    type="text"
+                    placeholder="e.g. oregano"
+                    aria-label="Add ingredient"
+                />
+                <button>Add ingredient</button>
+            </form>
         </main>
     )
 }
