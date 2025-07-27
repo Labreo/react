@@ -5,9 +5,7 @@ export default function Main() {
 
     const [ingredients, setIngredients] = React.useState([])
     const [recipeShown,setRecipeShown] = React.useState(false)
-    const ingredientsListItems = ingredients.map(ingredient => (
-        <IngredientsList ingredient={ingredient}/>
-    ))
+
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
@@ -30,17 +28,7 @@ export default function Main() {
                 />
                 <button>Add ingredient</button>
             </form>
-            {ingredients.length>0 && <section>
-                <h2>Ingredients on hand:</h2>
-                <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
-               {ingredientsListItems.length>3 && <div className="get-recipe-container">
-                    <div>
-                        <h3>Ready for a recipe?</h3>
-                        <p>Generate a recipe from your list of ingredients.</p>
-                    </div>
-                    <button onClick={showrecipe}>Get a recipe</button>
-                </div>}
-            </section>}
+            {ingredients.length>0 && <IngredientsList ingredients={ingredients} showrecipe={showrecipe}/>}
             {recipeShown!=false && <ClaudeRecipe />}
         </main>
     )
