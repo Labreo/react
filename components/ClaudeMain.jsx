@@ -1,0 +1,39 @@
+import React from "react"
+import ClaudeRecipe from "./ClaudeRecipe"
+import IngredientsList from "./IngredientsList"
+import { getRecipeFromMistral } from "../ai"
+export default function ClaudeMain() {
+
+    const [ingredients, setIngredients] = React.useState([])
+    const [recipeShown,setRecipeShown] = React.useState(false)
+    const [recipe, setRecipe] = React.useState("")
+
+
+    function addIngredient(formData) {
+        const newIngredient = formData.get("ingredient")
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
+    }
+    
+    async function showrecipe(){
+       const recipeMarkdown = await getRecipeFromMistral(ingredients)
+       setRecipe(recipeMarkdown)
+       setRecipeShown(true)
+    }
+
+
+    return (
+        <main>
+            <form action={addIngredient} className="add-ingredient-form">
+                <input
+                    type="text"
+                    placeholder="e.g. oregano"
+                    aria-label="Add ingredient"
+                    name="ingredient"
+                />
+                <button>Add ingredient</button>
+            </form>
+            {ingredients.length>0 && <IngredientsList ingredients={ingredients} showrecipe={showrecipe}/>}
+            {recipeShown && <ClaudeRecipe markdown={recipe}/>}
+        </main>
+    )
+}

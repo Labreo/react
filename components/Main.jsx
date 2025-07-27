@@ -1,39 +1,29 @@
-import React from "react"
-import ClaudeRecipe from "./ClaudeRecipe"
-import IngredientsList from "./IngredientsList"
-import { getRecipeFromMistral } from "../ai"
 export default function Main() {
-
-    const [ingredients, setIngredients] = React.useState([])
-    const [recipeShown,setRecipeShown] = React.useState(false)
-    const [recipe, setRecipe] = React.useState("")
-
-
-    function addIngredient(formData) {
-        const newIngredient = formData.get("ingredient")
-        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
-    }
-    
-    async function showrecipe(){
-       const recipeMarkdown = await getRecipeFromMistral(ingredients)
-       setRecipe(recipeMarkdown)
-       setRecipeShown(true)
-    }
-
-
     return (
         <main>
-            <form action={addIngredient} className="add-ingredient-form">
-                <input
-                    type="text"
-                    placeholder="e.g. oregano"
-                    aria-label="Add ingredient"
-                    name="ingredient"
-                />
-                <button>Add ingredient</button>
-            </form>
-            {ingredients.length>0 && <IngredientsList ingredients={ingredients} showrecipe={showrecipe}/>}
-            {recipeShown && <ClaudeRecipe markdown={recipe}/>}
+            <div className="form">
+                <label>Top Text
+                    <input
+                        type="text"
+                        placeholder="One does not simply"
+                        name="topText"
+                    />
+                </label>
+
+                <label>Bottom Text
+                    <input
+                        type="text"
+                        placeholder="Walk into Mordor"
+                        name="bottomText"
+                    />
+                </label>
+                <button>Get a new meme image 🖼</button>
+            </div>
+            <div className="meme">
+                <img src="http://i.imgflip.com/1bij.jpg" />
+                <span className="top">One does not simply</span>
+                <span className="bottom">Walk into Mordor</span>
+            </div>
         </main>
     )
 }

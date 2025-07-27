@@ -1,10 +1,12 @@
-import chefClaudeLogo from "/images/chef-claude-icon.png"
+import trollFace from "../images/troll-face.png"
 
 export default function Header() {
     return (
-        <header>
-            <img src={chefClaudeLogo}/>
-            <h1>Chef Claude</h1>
+        <header className="header">
+            <img 
+                src={trollFace} 
+            />
+            <h1>Meme Generator</h1>
         </header>
     )
 }
