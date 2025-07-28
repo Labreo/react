@@ -14,6 +14,11 @@ export default function Main() {
     },[])
     
     console.log(allMemes)
+    function getMemeImages(){
+        const RandomNumber = Math.floor(Math.random()*allMemes.length)
+        const newMemeIrl = allMemes[RandomNumber].url
+        setMemeInfo(prevMeme=>({...prevMeme,imageUrl:`${newMemeIrl}`}))
+    }
 
 
     function handleChange(event){
@@ -42,7 +47,7 @@ export default function Main() {
                         value={memeInfo.bottomText}
                     />
                 </label>
-                <button>Get a new meme image 🖼</button>
+                <button onClick={getMemeImages}>Get a new meme image 🖼</button>
             </div>
             <div className="meme">
                 <img src={memeInfo.imageUrl} />
